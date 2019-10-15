@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -8,10 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RomanianVioletRollsRoyce.Crosscutting.HealthChecks;
 using RomanianVioletRollsRoyce.Crosscutting.Middleware;
-using RomanianVioletRollsRoyce.Crosscutting.RequestContext;
 using System.Linq;
 using System.Text.Json;
 using Microsoft.Extensions.Caching.Memory;
+using RomanianVioletRollsRoyce.Crosscutting.Context;
 using RomanianVioletRollsRoyce.Crosscutting.Factories;
 using RomanianVioletRollsRoyce.Data.Interfaces;
 using RomanianVioletRollsRoyce.Data.Repositories;
@@ -40,6 +41,7 @@ namespace RomanianVioletRollsRoyce.API
         {
             services.AddMvcCore().AddJsonOptions(options => options.JsonSerializerOptions.IgnoreNullValues = true);
             services.AddControllers();
+            services.AddCors();
             services.AddMemoryCache();
             SetupDependencyInjection(services);
             SetupHealthChecks(services);
@@ -82,13 +84,16 @@ namespace RomanianVioletRollsRoyce.API
 
             app.UseAuthorization();
 
+            app.UseCors(options => options.WithOrigins("https://localhost:44374/")
+                                          .AllowAnyMethod().AllowAnyHeader());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
 
             SetupHealthCheckOptions(app);
-            SeedCustomers(cache);
+            SeedData(cache);
         }
 
         private void SetupHealthCheckOptions(IApplicationBuilder app)
@@ -116,9 +121,14 @@ namespace RomanianVioletRollsRoyce.API
             });
         }
 
-        private void SeedCustomers(IMemoryCache cache)
+        private void SeedData(IMemoryCache cache)
         {
-            cache.Set("C-1", new Customer { CustomerId = 1, Name = "Karl Jan", Surname = "Bossart" }, TimeSpan.FromHours(1));
+            var transaction = new Transaction { TransactionId = 1, AccountId = 1, Amount = 50, DateTime = DateTime.Now };
+            var account = new Account { AccountId = 1, CustomerId = 1, Balance = 50, Transactions = new List<Transaction> { transaction } };
+
+            cache.Set("A-1", account);
+            cache.Set("T-1", transaction);
+            cache.Set("C-1", new Customer { CustomerId = 1, Name = "Karl Jan", Surname = "Bossart", Accounts = new List<Account> { account } }, TimeSpan.FromHours(1));
             cache.Set("C-2", new Customer { CustomerId = 2, Name = "Robert", Surname = "Cailliau" }, TimeSpan.FromHours(1));
             cache.Set("C-3", new Customer { CustomerId = 3, Name = "Ingrid", Surname = "Daubechies" }, TimeSpan.FromHours(1));
         }

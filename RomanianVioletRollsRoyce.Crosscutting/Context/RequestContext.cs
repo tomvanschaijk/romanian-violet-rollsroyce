@@ -1,4 +1,4 @@
-﻿namespace RomanianVioletRollsRoyce.Crosscutting.RequestContext
+﻿namespace RomanianVioletRollsRoyce.Crosscutting.Context
 {
     public class RequestContext
     {

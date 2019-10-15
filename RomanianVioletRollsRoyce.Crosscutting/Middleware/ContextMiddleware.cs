@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Linq;
 using System.Threading.Tasks;
+using RomanianVioletRollsRoyce.Crosscutting.Context;
 
 namespace RomanianVioletRollsRoyce.Crosscutting.Middleware
 {
     public abstract class ContextMiddleware
     {
-        public abstract Task InvokeAsync(HttpContext context, RequestContext.RequestContext requestContext);
+        public abstract Task InvokeAsync(HttpContext context, RequestContext requestContext);
 
         protected static string GetValueFromHeaders(HttpContext context, string key)
         {

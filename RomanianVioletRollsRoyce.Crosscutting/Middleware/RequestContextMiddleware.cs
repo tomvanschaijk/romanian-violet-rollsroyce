@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
+using RomanianVioletRollsRoyce.Crosscutting.Context;
 
 namespace RomanianVioletRollsRoyce.Crosscutting.Middleware
 {
@@ -13,7 +14,7 @@ namespace RomanianVioletRollsRoyce.Crosscutting.Middleware
             _next = next;
         }
 
-        public override async Task InvokeAsync(HttpContext context, RequestContext.RequestContext requestContext)
+        public override async Task InvokeAsync(HttpContext context, RequestContext requestContext)
         {
             if (IsMonitoringEndpoint(context))
             {

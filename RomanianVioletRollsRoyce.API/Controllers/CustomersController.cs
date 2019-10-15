@@ -25,7 +25,7 @@ namespace RomanianVioletRollsRoyce.API.Controllers
 
         [Route("accountdata")]
         [HttpGet]
-        public async Task<IActionResult> GetCustomerAccountData(int accountId)
+        public async Task<IActionResult> GetCustomerAccountData()
         {
             var accountService = _serviceFactory.GetService<IAccountService>();
             var accountTransactionData = await accountService.GetCustomerAccountData();
