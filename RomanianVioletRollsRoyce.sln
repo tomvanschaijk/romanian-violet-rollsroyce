@@ -3,7 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Domain", "RomanianVioletRollsRoyce.Domain\RomanianVioletRollsRoyce.Domain.csproj", "{D9DB1F30-F053-4AF4-A876-3334C71F6B85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Domain", "RomanianVioletRollsRoyce.Domain\RomanianVioletRollsRoyce.Domain.csproj", "{D9DB1F30-F053-4AF4-A876-3334C71F6B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Crosscutting", "RomanianVioletRollsRoyce.Crosscutting\RomanianVioletRollsRoyce.Crosscutting.csproj", "{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.API", "RomanianVioletRollsRoyce.API\RomanianVioletRollsRoyce.API.csproj", "{49A43298-17A3-4F11-A2A7-88B841673BC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Services", "RomanianVioletRollsRoyce.Services\RomanianVioletRollsRoyce.Services.csproj", "{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Data", "RomanianVioletRollsRoyce.Data\RomanianVioletRollsRoyce.Data.csproj", "{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6CF3D205-2F85-49A7-B426-1B7E6433DDAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{4AC93FFA-C8DC-4C26-948A-D62C36866822}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5C772236-D46D-41E2-8110-C58BC60708EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3FDBDF4E-B0CA-4993-BB31-67440B7753BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Services.UnitTests", "RomanianVioletRollsRoyce.Services.UnitTests\RomanianVioletRollsRoyce.Services.UnitTests.csproj", "{2051AC54-70EA-4510-B85F-DFA958C5A3D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Data.UnitTests", "RomanianVioletRollsRoyce.Data.UnitTests\RomanianVioletRollsRoyce.Data.UnitTests.csproj", "{472DFB64-F431-4115-AB4C-398B4F5EA7A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +35,42 @@ Global
 		{D9DB1F30-F053-4AF4-A876-3334C71F6B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9DB1F30-F053-4AF4-A876-3334C71F6B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9DB1F30-F053-4AF4-A876-3334C71F6B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2051AC54-70EA-4510-B85F-DFA958C5A3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2051AC54-70EA-4510-B85F-DFA958C5A3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2051AC54-70EA-4510-B85F-DFA958C5A3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2051AC54-70EA-4510-B85F-DFA958C5A3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9DB1F30-F053-4AF4-A876-3334C71F6B85} = {3FDBDF4E-B0CA-4993-BB31-67440B7753BF}
+		{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D} = {3FDBDF4E-B0CA-4993-BB31-67440B7753BF}
+		{49A43298-17A3-4F11-A2A7-88B841673BC1} = {6CF3D205-2F85-49A7-B426-1B7E6433DDAB}
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607} = {5C772236-D46D-41E2-8110-C58BC60708EE}
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5} = {4AC93FFA-C8DC-4C26-948A-D62C36866822}
+		{2051AC54-70EA-4510-B85F-DFA958C5A3D5} = {5C772236-D46D-41E2-8110-C58BC60708EE}
+		{472DFB64-F431-4115-AB4C-398B4F5EA7A7} = {4AC93FFA-C8DC-4C26-948A-D62C36866822}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AC0DF91-5E76-4AB6-9DE9-E30A45924E60}
