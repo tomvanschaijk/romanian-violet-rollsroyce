@@ -27,13 +27,15 @@ namespace RomanianVioletRollsRoyce.Services.Services
 
         public async Task<Account> CreateAccount(CreateAccountRequest request)
         {
+            if (request == null) { throw new ArgumentNullException(nameof(request)); }
+
             var repos = _repositoryFactory.GetRepository<IAccountRepository>();
             var account = await repos.CreateAccount(request.CustomerId);
 
             if (request.InitialCredit != 0)
             {
                 await _serviceFactory.GetService<ITransactionService>()
-                    .CreateTransaction(account.AccountId, request.InitialCredit);
+                                     .CreateTransaction(account.AccountId, request.InitialCredit);
             }
 
             return account;
