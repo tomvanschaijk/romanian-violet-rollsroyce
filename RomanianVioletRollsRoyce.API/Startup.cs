@@ -110,7 +110,6 @@ namespace RomanianVioletRollsRoyce.API
                         {
                             resource = e.Key,
                             status = e.Value.Status.ToString(),
-                            e.Value.Description,
                             details = e.Value.Data,
                         }),
                         durationMs = report.TotalDuration.TotalMilliseconds
