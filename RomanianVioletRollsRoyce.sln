@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Domain", "RomanianVioletRollsRoyce.Domain\RomanianVioletRollsRoyce.Domain.csproj", "{D9DB1F30-F053-4AF4-A876-3334C71F6B85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Crosscutting", "RomanianVioletRollsRoyce.Crosscutting\RomanianVioletRollsRoyce.Crosscutting.csproj", "{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Crosscutting", "RomanianVioletRollsRoyce.Crosscutting\RomanianVioletRollsRoyce.Crosscutting.csproj", "{E1F92674-8F8B-44ED-8016-F8D1C7D93D9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.API", "RomanianVioletRollsRoyce.API\RomanianVioletRollsRoyce.API.csproj", "{49A43298-17A3-4F11-A2A7-88B841673BC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Services", "RomanianVioletRollsRoyce.Services\RomanianVioletRollsRoyce.Services.csproj", "{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Services", "RomanianVioletRollsRoyce.Services\RomanianVioletRollsRoyce.Services.csproj", "{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Data", "RomanianVioletRollsRoyce.Data\RomanianVioletRollsRoyce.Data.csproj", "{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Data", "RomanianVioletRollsRoyce.Data\RomanianVioletRollsRoyce.Data.csproj", "{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6CF3D205-2F85-49A7-B426-1B7E6433DDAB}"
 EndProject
@@ -21,9 +21,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3FDBDF4E-B0CA-4993-BB31-67440B7753BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Services.UnitTests", "RomanianVioletRollsRoyce.Services.UnitTests\RomanianVioletRollsRoyce.Services.UnitTests.csproj", "{2051AC54-70EA-4510-B85F-DFA958C5A3D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Services.UnitTests", "RomanianVioletRollsRoyce.Services.UnitTests\RomanianVioletRollsRoyce.Services.UnitTests.csproj", "{2051AC54-70EA-4510-B85F-DFA958C5A3D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Data.UnitTests", "RomanianVioletRollsRoyce.Data.UnitTests\RomanianVioletRollsRoyce.Data.UnitTests.csproj", "{472DFB64-F431-4115-AB4C-398B4F5EA7A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.Data.UnitTests", "RomanianVioletRollsRoyce.Data.UnitTests\RomanianVioletRollsRoyce.Data.UnitTests.csproj", "{472DFB64-F431-4115-AB4C-398B4F5EA7A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{2DB3FC04-D9C1-48BD-910F-914C772BDB96}"
+	ProjectSection(SolutionItems) = preProject
+		RomanianVioletRollsRoyce.Postman\Romanian Violet Rolls Royce.Postman collection.json = RomanianVioletRollsRoyce.Postman\Romanian Violet Rolls Royce.Postman collection.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
