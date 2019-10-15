@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
@@ -12,25 +8,31 @@ using RomanianVioletRollsRoyce.Domain.Entities;
 using RomanianVioletRollsRoyce.Domain.Requests;
 using RomanianVioletRollsRoyce.Services.Interfaces;
 using RomanianVioletRollsRoyce.Services.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace RomanianVioletRollsRoyce.Services.UnitTests
 {
     [TestFixture]
-    public class Tests
+    public class AccountServiceTests
     {
         private AccountService _sut;
         private readonly ILogger<AccountService> _logger = new NullLogger<AccountService>();
         private readonly Mock<IServiceFactory> _serviceFactory = new Mock<IServiceFactory>();
         private readonly Mock<IRepositoryFactory> _repositoryFactory = new Mock<IRepositoryFactory>();
 
-        [OneTimeSetUp]
-        public void OneTimeSetup()
+        [SetUp]
+        public void Setup()
         {
+            _serviceFactory.Reset();
+            _repositoryFactory.Reset();
             _sut = new AccountService(_logger, _serviceFactory.Object, _repositoryFactory.Object);
         }
 
         [Test]
-        public void CreateAccount_WithNullParameters_Should_Throw_ArgumentNullException()
+        public void Constructor_With_NullParameters_Should_Throw_ArgumentNullException()
         {
             Assert.Throws<ArgumentNullException>(() => new AccountService(null, _serviceFactory.Object, _repositoryFactory.Object));
             Assert.Throws<ArgumentNullException>(() => new AccountService(_logger, null, _repositoryFactory.Object));
@@ -39,7 +41,13 @@ namespace RomanianVioletRollsRoyce.Services.UnitTests
         }
 
         [Test]
-        public async Task CreateAccount_WithValidRequest_Should_Call_Repository()
+        public async Task CreateAccount_With_NullRequest_Should_Throw_ArgumentNullException()
+        {
+            Assert.ThrowsAsync<ArgumentNullException>(() => _sut.CreateAccount(null));
+        }
+
+        [Test]
+        public async Task CreateAccount_With_ValidRequest_Should_Call_Repository()
         {
             var expectedAccount = new Account { CustomerId = 1, AccountId = 1, Balance = 0 };
             var request = new CreateAccountRequest { CustomerId = 1, InitialCredit = 0 };
@@ -57,7 +65,7 @@ namespace RomanianVioletRollsRoyce.Services.UnitTests
         }
 
         [Test]
-        public async Task CreateAccount_WithInitialCreditNotZero_Should_CreateTransaction()
+        public async Task CreateAccount_With_InitialCreditNotZero_Should_CreateTransaction()
         {
             var expectedAccount = new Account
             {
