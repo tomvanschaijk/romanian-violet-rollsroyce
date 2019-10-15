@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "monitoring/alive",
+      "launchUrl": "monitoring/health",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "RomanianVioletRollsRoyce.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "monitoring/alive",
+      "launchUrl": "monitoring/health",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
