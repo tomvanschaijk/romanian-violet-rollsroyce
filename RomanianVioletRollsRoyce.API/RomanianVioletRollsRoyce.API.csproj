@@ -24,6 +24,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RomanianVioletRollsRoyce.Crosscutting\RomanianVioletRollsRoyce.Crosscutting.csproj" />
+    <ProjectReference Include="..\RomanianVioletRollsRoyce.Data\RomanianVioletRollsRoyce.Data.csproj" />
+    <ProjectReference Include="..\RomanianVioletRollsRoyce.Domain\RomanianVioletRollsRoyce.Domain.csproj" />
+    <ProjectReference Include="..\RomanianVioletRollsRoyce.Services\RomanianVioletRollsRoyce.Services.csproj" />
   </ItemGroup>
 
 </Project>

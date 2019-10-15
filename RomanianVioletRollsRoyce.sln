@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Cr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanianVioletRollsRoyce.API", "RomanianVioletRollsRoyce.API\RomanianVioletRollsRoyce.API.csproj", "{49A43298-17A3-4F11-A2A7-88B841673BC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Services", "RomanianVioletRollsRoyce.Services\RomanianVioletRollsRoyce.Services.csproj", "{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Data", "RomanianVioletRollsRoyce.Data\RomanianVioletRollsRoyce.Data.csproj", "{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49A43298-17A3-4F11-A2A7-88B841673BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF0AD0F-7057-44A2-97BD-C79A6E3EF607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
