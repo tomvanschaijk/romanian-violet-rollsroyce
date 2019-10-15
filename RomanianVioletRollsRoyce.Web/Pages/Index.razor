@@ -22,6 +22,7 @@ else
                 <tr>
                     <th>Name</th>
                     <th>Surname</th>
+                    <th>AccountId</th>
                     <th>Balance</th>
                     <th>Transactions</th>
                 </tr>
@@ -29,37 +30,38 @@ else
             <tbody>
                 @foreach (var customerAccountData in _customerAccountDataResponse.Data)
                 {
-                    <tr>
-                        <td>@customerAccountData.Name</td>
-                        <td>@customerAccountData.Surname</td>
-                        <td>@customerAccountData.Balance</td>
-                        <td>
-                            @if (customerAccountData.Transactions.Any())
-                            {
-                                <table>
-                                    <thead>
+                <tr>
+                    <td>@customerAccountData.Name</td>
+                    <td>@customerAccountData.Surname</td>
+                    <td>@customerAccountData.AccountId</td>
+                    <td>@customerAccountData.Balance</td>
+                    <td>
+                        @if (customerAccountData.Transactions.Any())
+                        {
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date/time</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var transaction in customerAccountData.Transactions)
+                                    {
                                         <tr>
-                                            <th>Date/time</th>
-                                            <th>Amount</th>
+                                            <td>@transaction.DateTime.ToShortDateString() @transaction.DateTime.ToShortTimeString()</td>
+                                            <td>@transaction.Amount</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (var transaction in customerAccountData.Transactions)
-                                        {
-                                            <tr>
-                                                <td>@transaction.DateTime.ToShortDateString() @transaction.DateTime.ToShortTimeString()</td>
-                                                <td>@transaction.Amount</td>
-                                            </tr>
-                                        }
-                                    </tbody>
-                                </table>
-                            }
-                            else
-                            {
-                                <p>None</p>
-                            }
-                        </td>
-                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>None</p>
+                        }
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>

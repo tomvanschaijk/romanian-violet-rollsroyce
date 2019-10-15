@@ -56,7 +56,7 @@ namespace RomanianVioletRollsRoyce.Services.Services
                                                    Surname = customer.Surname,
                                                    AccountId = account.AccountId,
                                                    Balance = account.Balance,
-                                                   Transactions = account.Transactions.OrderBy(e => e.DateTime).ToList()
+                                                   Transactions = account.Transactions.OrderByDescending(e => e.DateTime).ToList()
                                                })).ToList();
 
             return customerAccountData;
