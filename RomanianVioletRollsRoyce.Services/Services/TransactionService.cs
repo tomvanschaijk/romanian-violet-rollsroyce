@@ -20,6 +20,8 @@ namespace RomanianVioletRollsRoyce.Services.Services
 
         public async Task<Transaction> CreateTransaction(int accountId, decimal amount)
         {
+            _logger.LogInformation($"Creating new transaction with amount {amount} for account with id {accountId}");
+
             var transaction = await _transactionRepository.CreateTransaction(accountId, amount);
             return transaction;
         }

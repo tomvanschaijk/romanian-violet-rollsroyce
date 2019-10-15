@@ -30,6 +30,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{2DB3
 		RomanianVioletRollsRoyce.Postman\Romanian Violet Rolls Royce.Postman collection.json = RomanianVioletRollsRoyce.Postman\Romanian Violet Rolls Royce.Postman collection.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{426D2A01-B9F6-4F14-8975-50D0AAF95DD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanianVioletRollsRoyce.Web", "RomanianVioletRollsRoyce.Web\RomanianVioletRollsRoyce.Web.csproj", "{5154C419-CB8F-42A0-B13C-11E1323D401D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,10 @@ Global
 		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{472DFB64-F431-4115-AB4C-398B4F5EA7A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5154C419-CB8F-42A0-B13C-11E1323D401D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5154C419-CB8F-42A0-B13C-11E1323D401D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5154C419-CB8F-42A0-B13C-11E1323D401D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5154C419-CB8F-42A0-B13C-11E1323D401D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,7 @@ Global
 		{6CFFD988-D8D8-4066-8581-6C7DACBB2BE5} = {4AC93FFA-C8DC-4C26-948A-D62C36866822}
 		{2051AC54-70EA-4510-B85F-DFA958C5A3D5} = {5C772236-D46D-41E2-8110-C58BC60708EE}
 		{472DFB64-F431-4115-AB4C-398B4F5EA7A7} = {4AC93FFA-C8DC-4C26-948A-D62C36866822}
+		{5154C419-CB8F-42A0-B13C-11E1323D401D} = {426D2A01-B9F6-4F14-8975-50D0AAF95DD8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AC0DF91-5E76-4AB6-9DE9-E30A45924E60}

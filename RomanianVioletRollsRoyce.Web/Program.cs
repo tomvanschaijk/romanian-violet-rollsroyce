@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace RomanianVioletRollsRoyce.API
+namespace RomanianVioletRollsRoyce.Web
 {
     public class Program
     {

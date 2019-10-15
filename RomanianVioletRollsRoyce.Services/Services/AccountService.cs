@@ -29,6 +29,8 @@ namespace RomanianVioletRollsRoyce.Services.Services
         {
             if (request == null) { throw new ArgumentNullException(nameof(request)); }
 
+            _logger.LogInformation("Creating account for incoming request {@Request}", request);
+
             var repos = _repositoryFactory.GetRepository<IAccountRepository>();
             var account = await repos.CreateAccount(request.CustomerId);
 
@@ -43,15 +45,19 @@ namespace RomanianVioletRollsRoyce.Services.Services
 
         public async Task<ICollection<CustomerAccountData>> GetCustomerAccountData()
         {
+            _logger.LogInformation("Getting customer account data");
+
             var customers = await _repositoryFactory.GetRepository<ICustomerRepository>().GetAllCustomers();
-            var customerAccountData = customers.SelectMany(customer => customer.Accounts.Select(account => new CustomerAccountData
-            {
-                Name = customer.Name,
-                Surname = customer.Surname,
-                AccountId = account.AccountId,
-                Balance = account.Balance,
-                Transactions = account.Transactions
-            })).ToList();
+            var customerAccountData = customers.OrderBy(e => e.Surname)
+                                               .ThenBy(e => e.Name)
+                                               .SelectMany(customer => customer.Accounts.Select(account => new CustomerAccountData
+                                               {
+                                                   Name = customer.Name,
+                                                   Surname = customer.Surname,
+                                                   AccountId = account.AccountId,
+                                                   Balance = account.Balance,
+                                                   Transactions = account.Transactions.OrderBy(e => e.DateTime).ToList()
+                                               })).ToList();
 
             return customerAccountData;
         }
