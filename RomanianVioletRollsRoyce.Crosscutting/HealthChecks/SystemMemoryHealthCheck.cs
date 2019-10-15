@@ -44,8 +44,8 @@ namespace RomanianVioletRollsRoyce.Crosscutting.HealthChecks
         private HealthStatus DetermineHealthStatus(double percentUsed)
             => percentUsed switch
             {
-                var _ when percentUsed > 90 => HealthStatus.Unhealthy,
-                var _ when percentUsed > 80 => HealthStatus.Degraded,
+                _ when percentUsed > 90 => HealthStatus.Unhealthy,
+                _ when percentUsed > 80 => HealthStatus.Degraded,
                 _ => HealthStatus.Healthy,
             };
     }
