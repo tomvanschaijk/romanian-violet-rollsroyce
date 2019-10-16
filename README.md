@@ -1,3 +1,5 @@
+Firstly, this solution uses dotnetcore 3.0, so do make sure you have all the obviously required installations on your end to be able to debug and play around with this application. I would say https://visualstudio.microsoft.com/vs/ and https://dotnet.microsoft.com/download/dotnet-core/3.0 are good locations to visit for that.
+
 To run the project, start both the API and the Web application. The API has 5 basic endpoints:
 * a GET to monitoring/alive which serves as a basic heartbeat check
 * a GET to monitoring/health which is the healthcheck functionality offered since dotnetcore 2.2. This one just offers a simple memory health check, since the API has no other external dependencies. It would make sense to also add a healthcheck to the Blazor Server web application, in which the alive endpoint of the API could be called (not the health endpoint, we don't want to cause a cascading effect of healthcheck calls). The implementation of healthchecks in Blazor Server seems to be a bit different though, since adding it in the "normal" way causes an issue with the routing. Consider this "under construction" until I find out what the way to go here is.
